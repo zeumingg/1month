@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestro Primer Mesesito</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap" rel="stylesheet">
+  <audio id="background-music" loop>
+    <source src="Blessd - Confía En Mi.mp3" type="audio/mpeg">
+    Tu navegador no soporta la reproducción de audio.
+  </audio>
+</head>
+<body>
 
+  <div class="hearts-container">
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+  </div>
+  
+  <div class="container">
+    <div class="proposal-card" id="portada">
+      <h1>Nuestro Primer Mesesito</h1>
+      <p class="message">Andrea, Mi niña, Quiza nunca te hubieras esperado algo asi, pero queria darte un detallito pequeño ya que es el primer mes que cumplimos juntos de toda la vida que pasaremos juntos, cierto?, Para empezar quiero decirte que desde que te conoci eres la niña mass maravillosa que he conocido y quiero todo contigo, por eso quiero que leas hasta el final todo lo que tengo para decirte en este corto tiempo...</p>
+      <div class="carousel">
+        <img src="Snoopy.png" alt="Foto 1">
+      </div>
+      <button class="btn yes" id="continuar">Comenzar</button>
+    </div>
+
+    <div class="proposal-card hidden" id="historia">
+      <h1>Nuestra historia</h1>
+      <p class="message"> Primero quiero que recordemos como inicio todo, hoy estamos aqui gracias a que te diste cuenta de las miradas que siempre te hacia, y en parte por lo de lenguaje, y yo que queria salirme y no participar en la actividad cuando me dijeron, quien pensaria que iba a terminar amando esa actividad por darme la oportunidad de hablarle y conocer a mi novia, mi mujer, mi niña, mi princesa hermosa, y el amor de mi vida, esa niña eres tu...</p>
+            <div class="carousel">
+        <img src="corazon.jpg" alt="Foto 2">
+      </div>
+      <button class="btn yes" id="continuar">Continuar</button>
+    </div>
+
+    <!-- AMOR -->
+    <div class="proposal-card hidden" id="amor">
+      <h1>El amor que te tengo</h1>
+      <p class="message"></p>
+      <button class="btn yes" id="continuar">Continuar</button>
+    </div>
+
+    <!-- Mensajes especiales -->
+    <div class="proposal-card hidden" id="mensajes">
+      <h1>Cosas que amo de ti Pt1</h1>
+      <p class="message"></p>
+      <button class="btn yes" id="continuar">Continuar</button>
+    </div>
+
+    <!-- Countdown -->
+    <div class="proposal-card hidden" id="countdown">
+      <h1>5 meses juntos</h1>
+      <p>Bueno, este es un contador de tiempo REAL desde el 08 de Octubre del 2024, posiblemente uno de los dias mas felices de mi vida, sobre todo si tengo en cuenta los planes que tengo a futuro contigo, los cuales estan en la proxima pagina...</p>
+      <div class="countdown-container">
+        <span id="dias">0</span> días |
+        <span id="horas">0</span> horas |
+        <span id="minutos">0</span> minutos |
+        <span id="segundos">0</span> segundos
+      </div>
+      <button class="btn yes" id="continuar">Continuar</button>
+    </div>
+
+    <!-- Futuro juntos -->
+    <div class="proposal-card hidden" id="futuro">
+      <h1>Nuestro futuro</h1>
+      <p class="message">Aquí puedes escribir tus sueños y planes juntos.</p>
+    </div>
+  </div>
+
+  <!-- Controles de música -->
+  <div class="music-controls">
+    <input type="range" id="volume-control" min="0" max="1" step="0.1" value="1">
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</body>
+</html>
