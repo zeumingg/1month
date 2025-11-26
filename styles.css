@@ -1,0 +1,289 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Dancing Script', cursive;
+    background: url('https://thumbs.dreamstime.com/b/patr%C3%B3n-amor-y-coraz%C3%B3n-fondos-fondo-de-pantalla-fuente-hermosa-pancarta-en-corazones-218572189.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #6d3b47;
+    overflow: hidden;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+  }
+  
+  .proposal-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #e75480;
+  }
+  
+  .message {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1 1 45%;
+  }
+  
+  .yes {
+    background: #e75480;
+    color: white;
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .music-controls {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  #volume-control {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100px;
+    height: 8px;
+    background: #f8a5c2;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  #volume-control:hover {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  
+  #volume-control::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #e75480;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  #volume-control::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #e75480;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  #volume-control::-webkit-slider-thumb:hover {
+    background: #ff6b9d;
+  }
+  
+  #volume-control::-moz-range-thumb:hover {
+    background: #ff6b9d;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .message {
+      font-size: 1rem;
+    }
+  
+    .btn {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  
+    .music-controls {
+      top: 10px;
+      right: 10px;
+    }
+  }
+  
+  /* Corazones animados */
+  .hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff4d4d;
+    opacity: 0.7;
+    transform: rotate(-45deg);
+    animation: float 5s infinite ease-in-out, changeColor 3s infinite alternate;
+  }
+  
+  .heart::before,
+  .heart::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: inherit;
+    border-radius: 50%;
+  }
+  
+  .heart::before {
+    top: -10px;
+    left: 0;
+  }
+  
+  .heart::after {
+    top: 0;
+    left: 10px;
+  }
+  
+  @keyframes float {
+    0% { transform: translateX(-100%) rotate(-45deg); }
+    100% { transform: translateX(100vw) rotate(-45deg); }
+  }
+  
+  @keyframes changeColor {
+    0% { background-color: #ff4d4d; }
+    25% { background-color: #ff6b9d; }
+    50% { background-color: #ff9f4d; }
+    75% { background-color: #ffd54d; }
+    100% { background-color: #ff4d4d; }
+  }
+  
+  .heart:nth-child(1) { top: 10%; animation-duration: 8s; animation-delay: 0s; }
+  .heart:nth-child(2) { top: 20%; animation-duration: 7s; animation-delay: 2s; }
+  .heart:nth-child(3) { top: 30%; animation-duration: 6s; animation-delay: 1s; }
+  .heart:nth-child(4) { top: 40%; animation-duration: 9s; animation-delay: 3s; }
+  .heart:nth-child(5) { top: 50%; animation-duration: 5s; animation-delay: 0s; }
+  .heart:nth-child(6) { top: 60%; animation-duration: 7s; animation-delay: 2s; }
+  .heart:nth-child(7) { top: 70%; animation-duration: 6s; animation-delay: 1s; }
+  .heart:nth-child(8) { top: 80%; animation-duration: 8s; animation-delay: 3s; }
+  .heart:nth-child(9) { top: 90%; animation-duration: 7s; animation-delay: 0s; }
+  .heart:nth-child(10) { top: 100%; animation-duration: 6s; animation-delay: 2s; }
+  
+  /* Galería de fotos */
+  .carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Espacio entre imágenes */
+    overflow: hidden;
+    width: 100%; /* O un ancho específico */
+}
+  
+.carousel img {
+  width: 30%; /* Ajuste para que entren 3 imágenes sin problemas */
+  max-width: 200px; /* Evita que sean demasiado grandes */
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+  
+.carousel img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+  
+  /* Countdown */
+  .countdown-container {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Textarea */
+  textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #e75480;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1rem;
+    resize: none;
+    margin-bottom: 20px;
+  }
+
+  .secret-message {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .hidden-message {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .secret-message:hover .hidden-message {
+    display: block;
+  }
+
+  section {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  section.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+  }
