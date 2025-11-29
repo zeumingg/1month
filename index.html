@@ -5,14 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nuestro Primer Mesesito</title>
   <link rel="stylesheet" href="styles.css">
-  <audio id="background-music" loop>
-    <source src="Blessd - Confía En Mi.mp3" type="audio/mpeg">
+  
+  <audio id="background-music" loop autoplay>
+    <source src="pensandoenti.mp3" type="audio/mpeg">
     Tu navegador no soporta la reproducción de audio.
   </audio>
 </head>
 <body>
 
   <div class="hearts-container">
+    <div class="heart"></div>
+    <div class="heart"></div>
     <div class="heart"></div>
     <div class="heart"></div>
     <div class="heart"></div>
@@ -37,10 +40,16 @@
       <button class="btn yes" id="continuar">Comenzar</button>
     </div>
 
+    <div class="proposal-card hidden" id="portada">
+      <h1>Algo Especial...</h1>
+      <p class="message">Antes de seguir, o antes de apenas iniciar, quiero asegurarme de que puedas tener el volumen de tu celular activo, ya que hay una musica, "Pensando en Ti", de mi Artista favorito, Blessd, que me gustaria dedicarte y me gustaria que escucharas mientras lees todo lo que tengo para decirte, ahora si, sigamos mi niñaa.</p>
+      <button class="btn yes" id="continuar">Continuar</button>
+    </div>
+
     <div class="proposal-card hidden" id="historia">
       <h1>Nuestra historia</h1>
       <p class="message"> Primero quiero que recordemos como inicio todo, hoy estamos aqui gracias a que te diste cuenta de las miradas que siempre te hacia, y en parte por lo de lenguaje, y yo que queria salirme y no participar en la actividad cuando me dijeron, quien pensaria que iba a terminar amando esa actividad por darme la oportunidad de hablarte y conocer a mi novia, mi mujer, mi niña, mi princesa hermosa, y el amor de mi vida, esa niña eres tu...</p>
-            <div class="carousel">
+          <div class="carousel">
         <img src="corazon.jpg" alt="Foto 2">
       </div>
       <button class="btn yes" id="continuar">Continuar</button>
@@ -106,15 +115,23 @@
 
     <div class="proposal-card hidden" id="futuro">
       <h1>Nuestro futuro</h1>
-      <p class="message">Aquí puedes escribir tus sueños y planes juntos.</p>
+      <p class="message">Por el momento, no puedo poner mas cosas, desafortunadamente aun no tenemos fotos juntos por ejemplo, pero se que poco a poco, con el tiempo, tendremos mas momentos juntos, y de aqui hasta que vuelva a actualizar esta pagina, espero tener muchas mas cosas por compartir y decirte, mientras tanto, gracias, gracias por hacerme el niño mas feliz del mundo desde hace un mes, gracias por ser esa niña maravillosa que eres, nunca te rindas, sabes que yo estoy para ti, a tu lado, para ayudarte en lo que necesites y cuando mas me necesites, me encanta pensar segun lo que veo en ti, que te estoy haciendo feliz, y espero no equivocarme porque mi objetivo es ese, quiero todo contigo, desde hace un mes, hasta toda la vida, Te Amo Mi Niñaa.</p>
+      <button class="btn yes" id="continuar">Continuar</button>
+  </div>
+
+    <div class="proposal-card hidden" id="futuro">
+      <h1>My Princess🩵</h1>
+      <p>Puedes escuchar la musica si quieres mientras tanto mi niña...</p>
+      <div class="carousel1">
+        <img src="myprincess.jpg" alt="Foto 9" style="width: 500px; height: auto;">
+      </div>
     </div>
-  </div>
 
-  <div class="music-controls">
-    <input type="range" id="volume-control" min="0" max="1" step="0.1" value="1">
-  </div>
+    <div class="music-controls">
+      <input type="range" id="volume-control" min="0" max="1" step="0.1" value="1">
+    </div>
 
-  <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </body>
 </html>
