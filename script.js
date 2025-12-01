@@ -1,7 +1,3 @@
-// =========================================================================
-// GESTIÓN ROBUSTA DEL AUDIO
-// =========================================================================
-
 const musicaFondo = document.getElementById('background-music');
 const volumenControl = document.getElementById('volume-control');
 let audioIniciado = false; 
@@ -30,10 +26,6 @@ function iniciarAudio() {
         });
     }
 }
-
-// =========================================================================
-// CÓDIGO EXISTENTE
-// =========================================================================
 
 const secciones = document.querySelectorAll('.proposal-card');
 let seccionActual = 0;
@@ -80,3 +72,4 @@ function actualizarContador() {
 
 setInterval(actualizarContador, 1000);
 actualizarContador();
+
